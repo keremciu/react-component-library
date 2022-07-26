@@ -8,7 +8,7 @@ export default {
 export const WithText = () => (
   <TestComponent
     heading="I am a test component"
-    content={<h2>Made with love by Harvey</h2>}
+    content={<h2>Test of test</h2>}
   />
 );
 

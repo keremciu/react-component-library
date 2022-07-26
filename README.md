@@ -1,11 +1,17 @@
 # React Component Library
 
+A component library consists:
+
+- List component
+
 [![Build status](https://badge.buildkite.com/90ff98db996bb137c5be1bdce666c4b1ce68a25b17af0a6a04.svg?branch=master)](https://buildkite.com/harvey/react-component-library)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
+This project was inspired by https://github.com/HarveyD/react-component-library this repository.
+
 This project skeleton was created to help people get started with creating their own React component library using:
 
-- [Rollup](https://github.com/rollup/rollup)
+- [Rollup](https://github.com/rollup/rollup) with esbuild plugin
 - [Sass](https://sass-lang.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 
@@ -13,10 +19,9 @@ It also features:
 
 - [Storybook](https://storybook.js.org/) to help you create and show off your components
 - [Jest](https://jestjs.io/) and [React Testing Library](https://github.com/testing-library/react-testing-library) enabling testing of the components
+- CSS Modules
 
-[**Read my blog post about why and how I created this project skeleton ▸**](https://blog.harveydelaney.com/creating-your-own-react-component-library/)
-
-[Check out this CodeSandbox to see the component library in action ▸](https://codesandbox.io/s/harvey-component-library-example-y2b60)
+I keep some content below from original README file as I didn't touch fundamental parts of the project.
 
 ## Development
 
@@ -65,7 +70,7 @@ This will generate:
     YourComponentName.stories.tsx
     YourComponentName.test.tsx
     YourComponentName.types.ts
-    YourComponentName.scss
+    YourComponentName.module.scss
 ```
 
 The default templates for each file can be modified under `util/templates`.

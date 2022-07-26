@@ -1,29 +1,20 @@
 module.exports = (componentName) => ({
   content: `// Generated with util/create-component.js
 import React from "react";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 import ${componentName} from "./${componentName}";
 import { ${componentName}Props } from "./${componentName}.types";
 
 describe("Test Component", () => {
-  let props: ${componentName}Props;
-
-  beforeEach(() => {
-    props = {
-      foo: "bar"
-    };
-  });
-
-  const renderComponent = () => render(<${componentName} {...props} />);
+  const setup = (props) => {
+    render(<${componentName} {...props} />);
+  }
 
   it("should render foo text correctly", () => {
-    props.foo = "harvey was here";
-    const { getByTestId } = renderComponent();
+    setup({ foo: "text prop is this one" })
 
-    const component = getByTestId("${componentName}");
-
-    expect(component).toHaveTextContent("harvey was here");
+    expect(screen.getByText(/text prop is this one/i)).toBeInTheDocument();
   });
 });
 `,

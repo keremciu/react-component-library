@@ -1,0 +1,13 @@
+@import "../typography.scss";
+
+.testComponent {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 16px;
+  width: 360px;
+  text-align: center;
+
+  .heading {
+    @include heading;
+  }
+}

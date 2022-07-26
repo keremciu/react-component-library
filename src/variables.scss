@@ -1,18 +1,23 @@
-// Variables
-$harvey-black: #131111;
-$harvey-white: #e0e0e0;
-$harvey-red: #ff2323;
-$harvey-green: #005f20;
-$harvey-blue: #070bce;
+/*
+  color-semantic names
+
+  - #ffffff; white;
+  - #13110b; black;
+  - #494949; gray;
+  - #fafafa; gray-light;
+  - #f0f0eb: green-light;
+  - #62625c: yellow-dark;
+*/
 
 :root {
-  --background: #fff;
-  --font-color: #494949;
+  --bg-color: #f0f0eb;
+  --text-color: #494949;
+  --primary-color: #62625c;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #3c3c3c;
-    --font-color: #fafafa;
+    --background: #13110b;
+    --text-color: #fafafa;
   }
 }

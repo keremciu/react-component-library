@@ -6,22 +6,32 @@ module.exports = {
   },
   framework: "@storybook/react",
   stories: ["../src/**/*.stories.tsx"],
-  addons: [],
   webpackFinal: async (config) => {
     config.module.rules.push({
       test: /\.scss$/,
       use: [
         "style-loader",
-        "css-loader",
         {
-          loader: "sass-loader",
+          loader: "css-loader",
           options: {
-            implementation: require("sass"),
-            sassOptions: {
-              outputStyle: "compressed",
+            modules: true,
+            importLoaders: 1,
+          },
+        },
+        {
+          loader: 'postcss-loader',
+          options: {
+            sourceMap: true,
+            postcssOptions: {
+              plugins: [
+                [
+                  "postcss-preset-env",
+                ],
+              ],
             },
           },
         },
+        "sass-loader",
       ],
       include: path.resolve(__dirname, "../"),
     });

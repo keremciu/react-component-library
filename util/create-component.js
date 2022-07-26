@@ -23,8 +23,13 @@ fs.mkdirSync(componentDirectory);
 const generatedTemplates = templates.map((template) => template(componentName));
 
 generatedTemplates.forEach((template) => {
+  let cssModuleExtension = ''
+  if (template.extension === '.scss') {
+    cssModuleExtension = '.module'
+  }
+
   fs.writeFileSync(
-    `${componentDirectory}/${componentName}${template.extension}`,
+    `${componentDirectory}/${componentName}${cssModuleExtension}${template.extension}`,
     template.content
   );
 });
