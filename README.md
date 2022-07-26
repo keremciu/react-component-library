@@ -1,13 +1,14 @@
 # React Component Library
 
-A component library consists:
-
-- List component
-
 [![Build status](https://badge.buildkite.com/90ff98db996bb137c5be1bdce666c4b1ce68a25b17af0a6a04.svg?branch=master)](https://buildkite.com/harvey/react-component-library)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-This project was inspired by https://github.com/HarveyD/react-component-library this repository.
+P.S:
+```
+This project was forked from [this repository](https://github.com/HarveyD/react-component-library) which is created by Harvey Delaney. I basically updated packages and refactored the setup for my own needs.
+
+You can just kickstart your react component library project with this template as this setup gives a good structure for July 2022.
+```
 
 This project skeleton was created to help people get started with creating their own React component library using:
 
@@ -21,7 +22,7 @@ It also features:
 - [Jest](https://jestjs.io/) and [React Testing Library](https://github.com/testing-library/react-testing-library) enabling testing of the components
 - CSS Modules
 
-I keep some content below from original README file as I didn't touch fundamental parts of the project.
+I keep some content below from [original README file](https://github.com/HarveyD/react-component-library/blob/master/README.md) as I didn't touch fundamental parts of the project.
 
 ## Development
 
